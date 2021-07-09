@@ -1,0 +1,44 @@
+.main{
+    width:99vw;
+    height:70vh;
+    text-align: center;
+    display:flex;   
+    align-items:center; 
+}
+
+.main form{
+    padding: 20px;
+    margin:auto;
+    text-align: left;
+  /*  border:2px solid lightblue;*/
+    border-radius: 5px;
+}
+
+form label{
+    display:inline-block;
+    width:90px;
+    padding: 5px;
+    font-weight: bolder;
+    background-color: lightblue;
+}
+
+form input[type="submit"]{
+    margin: 10px;
+    width: 100px;
+    text-align: center;
+    background-color: lightblue;
+    padding: 5px;
+}
+
+form input[type="text"],form input[type="password"]{
+    margin: 10px;   
+    padding: 5px; 
+}
+
+#center{
+    text-align: center;
+}
+
+p{
+    color: red;
+}

@@ -1,0 +1,40 @@
+div form,.result{
+    padding: 10px;
+    margin: 10px;
+    position: absolute;
+    left:30%;
+}
+
+a{
+    padding: 10px;
+    background-color: lightblue;
+    position: absolute;
+    right:5%;
+    border-radius: 5px;
+    text-decoration: none;
+}
+a:hover{
+    background-color: blue;
+}
+
+div{
+    position:relative;
+    width:99vw;
+    height:70vh;
+}
+
+form input[type="radio"]{
+    margin: 10px;
+}
+
+form input[type="button"],input[type="submit"]{
+    margin: 10px;
+    width: 100px;
+    background-color: lightblue;
+}
+
+/*.result{
+    font-size: 30px;
+    font-weight: bolder;
+}*/
+

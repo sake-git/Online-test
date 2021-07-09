@@ -1,0 +1,13 @@
+<div class="main" *ngIf="!enableTest">
+    <form #loginForm="ngForm" (ngSubmit)='login(loginForm)'>
+        <label>User Id: </label>
+        <input type="text" name='uname' ngModel><br>
+        <label>Password: </label>
+        <input type="password" name='pwd' ngModel><br>
+        <div id='center'>
+        <input type="submit" value='Login'><br>
+        </div>
+        <p>{{msg}}</p>
+    </form>
+</div>
+<app-test *ngIf="enableTest"></app-test>

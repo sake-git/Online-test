@@ -1,0 +1,25 @@
+
+div{
+    height: 90vh;
+    position: relative;
+}
+header{
+    text-align: center;
+    background-color: lightblue;
+    padding: 10px;
+    margin: 10px;
+    font-weight: bolder;
+    font-size: 40px;
+    width:95vw;
+}
+
+footer{
+    text-align: center;
+    background-color: lightblue;
+    padding: 10px;
+    margin: 10px;
+    font-weight: bolder;
+    position:absolute;
+    bottom:10px;
+    width:95vw;
+}

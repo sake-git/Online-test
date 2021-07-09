@@ -1,0 +1,73 @@
+{
+	"Questionnaire":[
+	{"quest":"Which of the following is correct about TypeScript?",
+	 "option1":"Angular is based on TypeScript.",
+	 "option2":"This is a superset of JavaScript.",
+	 "option3":"TypeScript is maintained by Microsoft.",
+	 "option4":"All of the above",
+	 "answer":"option4"
+	},
+	{"quest":"What is the decorator used for configuring your module class?",
+	 "option1":"@NgModule",
+	 "option2":"@NgApp",
+	 "option3":"Both",
+	 "option4":"None of above",
+	 "answer":"option1"
+	},
+	{"quest":"Which angular decorator allows us to define the pipe name that is globally available for use in any template in the across application?",
+	 "option1":"pipeName",
+	 "option2":"pipeDeco",
+	 "option3":"Pipe",
+	 "option4":"All of the above",
+	 "answer":"option3"
+	},
+	{"quest":"Observables help manage ______  data",
+	 "option1":"synchronous",
+	 "option2":"asynchronous",
+	 "option3":"Both asynchronous & synchronous",
+	 "option4":"None of the above",
+	 "answer":"option2"
+	},
+	{"quest":"In SOLID principle, O stands for ",
+	 "option1":"Objects and Variables",
+	 "option2":"Open-Closed Principle",
+	 "option3":"Object-Oriented Programming",
+	 "option4":"OutOfMemory Exception",
+	 "answer":"option2"
+	},
+	{"quest":"Angular is an open source framework to build web application using html and JavaScript with below approach.",
+	 "option1":"UI first approach",
+	 "option2":"Web first approach",
+	 "option3":"Mobile first approach",
+	 "option4":"None of the above",
+	 "answer":"option3"
+	},
+	{"quest":"What does Angular NgForm component represents in an HTML Web page ",
+	 "option1":"Submit button",
+	 "option2":"Form element",
+	 "option3":"Text Area",
+	 "option4":"None of the above",
+	 "answer":"option2"
+	},
+	{"quest":"Which of the following is not a hook application life cycle?",
+	 "option1":"ngOnChanges",
+	 "option2":"ngOnInit",
+	 "option3":"ngDoCheck",
+	 "option4":"ngViewStart",
+	 "answer":"option4"
+	},
+	{"quest":"Router is part of which of the following module?",
+	 "option1":"@angular/router",
+	 "option2":"@angular/core",
+	 "option3":"Both",
+	 "option4":"None of the above",
+	 "answer":"option1"
+	},
+	{"quest":"RxJS can be used for?",
+	 "option1":"Browser",
+	 "option2":"Server Side",
+	 "option3":"Both",
+	 "option4":"None of the above",
+	 "answer":"option3"
+	}]
+}
