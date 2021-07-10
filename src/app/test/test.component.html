@@ -1,18 +1,20 @@
-<div>    
-    <form *ngIf='!showResult'  [formGroup]="questFormGroup" (ngSubmit)="result()">
-        <label>Q{{counter+1}}: {{questionList[counter].quest}} </label> <br>
-        <input type="radio" value="option1" formControlName='ans'>{{questionList[counter].option1}}<br>
-        <input type="radio" value="option2" formControlName='ans'>{{questionList[counter].option2}}<br>
-        <input type="radio" value="option3" formControlName='ans'>{{questionList[counter].option3}}<br>
-        <input type="radio" value="option4" formControlName='ans'>{{questionList[counter].option4}}<br>
-        <input type="button" value="Prev" (click)="previous()"  [disabled]='disablePrev'>
-        <input type="button" value="Next" (click)="next()" *ngIf='!submit'>
-        <input type="submit" value="Submit" *ngIf='submit'>
-    </form> 
-    <div *ngIf='showResult' class='result'>
-        <h2>{{marks |formatResult :questionList.length}}</h2>
-        <p> {{marks}} answers correct out of {{questionList.length}} </p>
-    </div> 
-    <a href='//localhost:4200'>Logout</a>
-
+<div class="main">   
+    <div class="right">
+      <span>Welcome {{currentUser}} </span>
+      <button (click)='logout()'>Logout</button><br><br>
+    </div>
+  <form *ngIf='!showResult'  [formGroup]="questFormGroup" (ngSubmit)="result()">
+    <label>Q{{counter+1}}: {{questionList[counter].quest}} </label> <br>
+    <input type="radio" value="option1" formControlName='ans'>{{questionList[counter].option1}}<br>
+    <input type="radio" value="option2" formControlName='ans'>{{questionList[counter].option2}}<br>
+    <input type="radio" value="option3" formControlName='ans'>{{questionList[counter].option3}}<br>
+    <input type="radio" value="option4" formControlName='ans'>{{questionList[counter].option4}}<br>
+    <input type="button" value="Prev" (click)="previous()"  [disabled]='disablePrev'>
+    <input type="button" value="Next" (click)="next()" *ngIf='!submit'>
+    <input type="submit" value="Submit" *ngIf='submit'>
+  </form> 
+  <div *ngIf='showResult' class='result'>
+    <h2>{{marks |formatResult :questionList.length}}</h2>
+    <p> {{marks}} answers correct out of {{questionList.length}} </p>
+  </div> 
 </div>

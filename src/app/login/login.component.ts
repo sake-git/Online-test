@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
+
+import { User } from '../user.model';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-login',
@@ -7,22 +11,26 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  enableTest=false;
-  credential={uname:'testUser',pwd:'testPass'};
+  credential:User[]=[];
   msg='';
-  constructor() { }
+
+  constructor(public route:Router, public userS:UserService) { 
+    this.userS.validateUser().subscribe( 
+      (userList)=> this.credential=userList,
+      (error)=>console.log(error));
+  }
 
   ngOnInit(): void {
   }
 
   login(loginForm:NgForm){
-    if(this.credential.uname==loginForm.value.uname && this.credential.pwd==loginForm.value.pwd){
-      this.enableTest=true;
-    }
-    else{
-      this.enableTest=false;
-      this.msg='Login Failed';
-    }
+      for(let user of this.credential){
+        if(user.uname==loginForm.value.uname && user.pwd==loginForm.value.pwd){
+          sessionStorage.setItem("key",user.uname);
+          this.route.navigate(["test"]);
+        }
+      }
+    this.msg='Login Failed'; 
     loginForm.resetForm();
-  }
+  }  
 }

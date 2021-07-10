@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output,EventEmitter } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 import { Question } from '../question.model';
 import { QuestionnaireService } from '../questionnaire.service';
 
@@ -18,12 +19,12 @@ export class TestComponent implements OnInit {
   disablePrev=true;
   submit=false;
   marks=0;
-
+  currentUser=sessionStorage.getItem("key");
 
   questFormGroup:FormGroup=new FormGroup(
     {ans:new FormControl('')})
 
-  constructor(public questService:QuestionnaireService) {
+  constructor(public questService:QuestionnaireService, public route:Router) {
     this.start=false;
     this.displayQuestions();
     this.counter++;
@@ -76,5 +77,10 @@ export class TestComponent implements OnInit {
       if(this.questionList[i].answer == this.answers[i])
         this.marks++;
     }
+  }
+
+  logout(){
+    this.route.navigate(["login"]);
+    sessionStorage.removeItem("key");
   }
 }

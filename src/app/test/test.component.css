@@ -2,7 +2,8 @@ div form,.result{
     padding: 10px;
     margin: 10px;
     position: absolute;
-    left:30%;
+    left:25%;
+    top: 10%;
 }
 
 a{
@@ -17,7 +18,7 @@ a:hover{
     background-color: blue;
 }
 
-div{
+.main{
     position:relative;
     width:99vw;
     height:70vh;
@@ -27,14 +28,16 @@ form input[type="radio"]{
     margin: 10px;
 }
 
-form input[type="button"],input[type="submit"]{
+form input[type="button"],input[type="submit"],button{
     margin: 10px;
     width: 100px;
     background-color: lightblue;
 }
 
-/*.result{
-    font-size: 30px;
+.right{
+    position: absolute;
+    right:5%;
+    text-decoration: solid;
     font-weight: bolder;
-}*/
+}
 

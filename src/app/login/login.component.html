@@ -1,4 +1,4 @@
-<div class="main" *ngIf="!enableTest">
+<div class="main"> 
     <form #loginForm="ngForm" (ngSubmit)='login(loginForm)'>
         <label>User Id: </label>
         <input type="text" name='uname' ngModel><br>
@@ -10,4 +10,4 @@
         <p>{{msg}}</p>
     </form>
 </div>
-<app-test *ngIf="enableTest"></app-test>
+

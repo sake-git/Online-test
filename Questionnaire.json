@@ -69,5 +69,10 @@
 	 "option3":"Both",
 	 "option4":"None of the above",
 	 "answer":"option3"
-	}]
+	}],
+	"User":[
+		{"uname":"JaneDoe", "pwd":"JaneTest"},
+		{"uname":"JohnDoe", "pwd":"JohnTest"},
+		{"uname":"TestUser", "pwd":"TestPwd"}
+	]
 }

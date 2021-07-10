@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { TestComponent } from './test/test.component';
 import { FormatResultPipe } from './format-result.pipe';
 import { LoginComponent } from './login/login.component';
+import { AppRoutingModule } from './app-routing/app-routing.module';
+import { MyAuthGuard } from './auth.guard';
 
 @NgModule({
   declarations: [
@@ -19,9 +21,10 @@ import { LoginComponent } from './login/login.component';
     BrowserModule,
     HttpClientModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
-  providers: [],
+  providers: [MyAuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
